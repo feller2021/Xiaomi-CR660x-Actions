@@ -13,7 +13,7 @@ echo '--下载源码--'
 sleep 3
 git clone --depth 1 https://github.com/coolsnowwolf/lede -b master
 cd lede
-bash -c "$(curl -L https://github.com/No06/Xiaomi-CR660x-Actions/raw/main/diy-part1.sh)"
+bash -c "$(curl -L https://github.com/feller2021/Xiaomi-CR660x-Actions/raw/main/diy-part1.sh)"
 
 echo '--更新软件源--'
 sleep 3
@@ -23,9 +23,9 @@ sleep 3
 echo '--导入配置--'
 sleep 3
 rm .config
-wget https://github.com/No06/Xiaomi-CR660x-Actions/raw/main/.config
-wget https://github.com/No06/Xiaomi-CR660x-Actions/raw/main/overclock.patch
-wget https://github.com/No06/Xiaomi-CR660x-Actions/raw/main/overclock_5_10.patch
+wget https://github.com/feller2021/Xiaomi-CR660x-Actions/raw/main/.config
+wget https://github.com/feller2021/Xiaomi-CR660x-Actions/raw/main/overclock.patch
+wget https://github.com/feller2021/Xiaomi-CR660x-Actions/raw/main/overclock_5_10.patch
 mv overclock.patch target/linux/ramips/patches-5.4/102-mt7621-fix-cpu-clk-add-clkdev.patch
 mv overclock_5_10.patch target/linux/ramips/patches-5.10/322-mt7621-fix-cpu-clk-add-clkdev.patch
 make defconfig
